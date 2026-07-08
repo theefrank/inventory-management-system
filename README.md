@@ -155,7 +155,6 @@ Debugging notes:
   the server crash.
 
 ## Task 5: Document and Maintain
-
 - Keep this README up to date whenever a route or field changes.
 - Suggested Git workflow used for this project:
   1. `main` branch always holds a working, tested version.
