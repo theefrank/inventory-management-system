@@ -11,7 +11,6 @@ from database import get_connection, row_to_dict
 
 REQUIRED_FIELDS = ["name"]
 
-
 def validate_item_payload(data, partial=False):
     """
     Very small validation helper.
