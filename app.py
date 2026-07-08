@@ -32,9 +32,7 @@ def create_app():
     app = Flask(__name__)
     init_db()
 
-    # ---------------------------------------------------------------
-    # Helper routes
-    # ---------------------------------------------------------------
+
     @app.get("/api/health")
     def health():
         return jsonify({"status": "ok"}), 200
@@ -53,9 +51,7 @@ def create_app():
             ],
         }), 200
 
-    # ---------------------------------------------------------------
-    # CRUD routes
-    # ---------------------------------------------------------------
+    
     @app.get("/api/items")
     def list_items():
         return jsonify(models.get_all_items()), 200
@@ -94,9 +90,7 @@ def create_app():
             return jsonify({"error": f"Item {item_id} not found."}), 404
         return jsonify({"message": f"Item {item_id} deleted."}), 200
 
-    # ---------------------------------------------------------------
-    # External API routes
-    # ---------------------------------------------------------------
+    
     @app.get("/api/external/barcode/<barcode>")
     def external_barcode(barcode):
         try:
